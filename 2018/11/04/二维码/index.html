@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="var qrcode = new QRCode(&quot;qrcode&quot;);     setInterval(function() {         /**          *          * 获取当前时间          */         function getNow(s) {             return s &amp;lt; 10 ? &apos;0&apos;">
+<meta name="description" content="var qrcode = new QRCode(&quot;qrcode&quot;);     var getqrcode=function(){         /**          *          * 获取当前时间          */         function getNow(s) {             return s &amp;lt; 10 ? &apos;0">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二维码">
 <meta property="og:url" content="http://yoursite.com/2018/11/04/二维码/index.html">
 <meta property="og:site_name" content="喵喵">
-<meta property="og:description" content="var qrcode = new QRCode(&quot;qrcode&quot;);     setInterval(function() {         /**          *          * 获取当前时间          */         function getNow(s) {             return s &amp;lt; 10 ? &apos;0&apos;">
+<meta property="og:description" content="var qrcode = new QRCode(&quot;qrcode&quot;);     var getqrcode=function(){         /**          *          * 获取当前时间          */         function getNow(s) {             return s &amp;lt; 10 ? &apos;0">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-04T16:02:50.065Z">
+<meta property="og:updated_time" content="2018-11-04T16:05:31.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二维码">
-<meta name="twitter:description" content="var qrcode = new QRCode(&quot;qrcode&quot;);     setInterval(function() {         /**          *          * 获取当前时间          */         function getNow(s) {             return s &amp;lt; 10 ? &apos;0&apos;">
+<meta name="twitter:description" content="var qrcode = new QRCode(&quot;qrcode&quot;);     var getqrcode=function(){         /**          *          * 获取当前时间          */         function getNow(s) {             return s &amp;lt; 10 ? &apos;0">
 
 
 
@@ -307,7 +307,7 @@
 </script>
     <script>
     var qrcode = new QRCode("qrcode");
-    setInterval(function() {
+    var getqrcode=function(){
         /**
          *
          * 获取当前时间
@@ -329,6 +329,10 @@
         qrcode.clear(); // 清除代码
         qrcode.makeCode(now); // 生成另外一个二维码
         $('#now').html(now);
+    }
+    getqrcode();
+    setInterval(function() {
+        getqrcode();
     }, 5000)
     </script>
 

@@ -308,7 +308,7 @@
 </script>
     <script>
     var qrcode = new QRCode("qrcode");
-    setInterval(function() {
+    var getqrcode=function(){
         /**
          *
          * 获取当前时间
@@ -330,6 +330,10 @@
         qrcode.clear(); // 清除代码
         qrcode.makeCode(now); // 生成另外一个二维码
         $('#now').html(now);
+    }
+    getqrcode();
+    setInterval(function() {
+        getqrcode();
     }, 5000)
     </script>
 
