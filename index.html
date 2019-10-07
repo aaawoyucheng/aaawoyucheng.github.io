@@ -48,8 +48,12 @@
     };
     </script>
     <style type="text/css">
-    .post-header,.custom-logo-site-title {
+    .post-header {
         display: none !important;
+    }
+    canvas{
+        margin: auto;
+        display: block;
     }
     </style>
     <link rel="canonical" href="http://yoursite.com/">
@@ -103,7 +107,7 @@
             <div class="main-inner">
                 <div class="content-wrap">
                     <div id="content" class="content">
-                        <section id="posts" class="posts-expand" style="padding: 0">
+                        <section id="posts" class="posts-expand">
                             <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
                                 <div class="post-block">
                                     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/04/二维码/">
@@ -135,7 +139,9 @@
                                         <script type="text/javascript" src="/js/src/qrcode.js"></script>
                                         <div id="qrcode"></div>
                                         <div id="now" style="text-align: center;"></div>
+                                        <!-- <div id="ua"></div> -->
                                         <script>
+                                        // $('#ua').text(navigator.userAgent);
                                         var qrcode = new QRCode("qrcode");
                                         var getqrcode = function() {
                                             /**
